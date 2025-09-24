@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","6648","test","Google Chrome","Wed Sep 24 16:59:38 IST 2025","passed","Wed Sep 24 16:59:44 IST 2025","","TS2.spec.ts","",""
+"","7812","test","Mobile Chrome","Wed Sep 24 16:59:26 IST 2025","passed","Wed Sep 24 16:59:34 IST 2025","","TS2.spec.ts","",""
+"","9757","test","webkit","Wed Sep 24 16:59:26 IST 2025","passed","Wed Sep 24 16:59:36 IST 2025","","TS2.spec.ts","",""
+"","7249","test","Microsoft Edge","Wed Sep 24 16:59:26 IST 2025","passed","Wed Sep 24 16:59:33 IST 2025","","TS2.spec.ts","",""
+"","9345","test","Mobile Safari","Wed Sep 24 16:59:27 IST 2025","passed","Wed Sep 24 16:59:36 IST 2025","","TS2.spec.ts","",""
+"","8164","test","chromium","Wed Sep 24 16:59:26 IST 2025","passed","Wed Sep 24 16:59:34 IST 2025","","TS2.spec.ts","",""
+"","15820","test","firefox","Wed Sep 24 16:59:26 IST 2025","passed","Wed Sep 24 16:59:42 IST 2025","","TS2.spec.ts","",""
