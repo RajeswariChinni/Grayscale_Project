@@ -11,9 +11,14 @@
   "devDependencies": {
     "@playwright/test": "^1.55.1",
     "@types/node": "^24.5.2",
+<<<<<<< HEAD
     "playwright": "^1.55.1"
   },
   "directories": {
     "test": "tests"
+=======
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.1"
+>>>>>>> 01a184789e7d42a8332027ffbc34485724149ecc
   }
 }
