@@ -18,6 +18,10 @@
   "homepage": "https://github.com/RajeswariChinni/Grayscale_Project#readme",
   "devDependencies": {
     "@playwright/test": "^1.55.1",
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.5.2",
+    "playwright": "^1.55.1"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
