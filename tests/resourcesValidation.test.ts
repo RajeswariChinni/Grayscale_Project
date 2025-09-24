@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('test', async () => {
+test.describe('Resource Page Functionality', async () => {
   test.beforeEach(async({page})=>{
     await page.goto('https://vagdevimahendrada.github.io/BMICalculator/');
     await expect.soft(page).toHaveURL("https://vagdevimahendrada.github.io/BMICalculator/");
@@ -15,7 +15,7 @@ test.describe('test', async () => {
     await browser.close();
   })
 
-  test("WHO - Obsesity and Overweight Facts wellness",async({page,context})=>{
+  test('WHO - Obsesity and Overweight Facts wellness',async({page,context})=>{
     const headingtext = page.locator("//h1[text()='Health Resources']");
     await expect.soft(headingtext).toHaveText("Health Resources");
     const [page1] = await Promise.all([
@@ -26,6 +26,7 @@ test.describe('test', async () => {
     await page1.waitForLoadState();
     await expect.soft(page1).toHaveURL("https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight");
   })
+  
   test("CDC - BMI Information",async({page,context})=>{
     const [page2] = await Promise.all([
       context.waitForEvent('page'),

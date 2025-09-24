@@ -1,0 +1,52 @@
+{
+    "data":[
+        {
+            "height": "168",
+            "heightMetric": "cm",
+            "weight": "60",
+            "weightMetric": "kg"
+        },
+        {
+            "height": "5.9",
+            "heightMetric": "feet",
+            "weight": "160",
+            "weightMetric": "lbs"
+        },
+        {
+            "height": "175",
+            "heightMetric": "cm",
+            "weight": "72",
+            "weightMetric": "kg"
+        },
+        {
+            "height": "66",
+            "heightMetric": "inches",
+            "weight": "130",
+            "weightMetric": "lbs"
+        },
+        {
+            "height": "180",
+            "heightMetric": "cm",
+            "weight": "78",
+            "weightMetric": "kg"
+        },
+        {
+            "height": "6.2",
+            "heightMetric": "feet",
+            "weight": "210",
+            "weightMetric": "lbs"
+        },
+        {
+            "height": "160",
+            "heightMetric": "cm",
+            "weight": "52",
+            "weightMetric": "kg"
+        },
+        {
+            "height": "69.6",
+            "heightMetric": "inches",
+            "weight": "150",
+            "weightMetric": "lbs"
+        }
+    ]
+}
