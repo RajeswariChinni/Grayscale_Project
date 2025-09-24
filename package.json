@@ -1,23 +1,8 @@
 {
-  "name": "grayscale_project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RajeswariChinni/Grayscale_Project.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/RajeswariChinni/Grayscale_Project/issues"
-  },
-  "homepage": "https://github.com/RajeswariChinni/Grayscale_Project#readme",
   "devDependencies": {
     "@playwright/test": "^1.55.1",
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   }
 }
