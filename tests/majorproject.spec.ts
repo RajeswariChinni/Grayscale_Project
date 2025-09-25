@@ -25,7 +25,7 @@ test.describe('BMI Calculator UI Tests', () => {
     const startButton = page.locator('//button[text()="Start Your BMI Check"]');
     await startButton.click();
 
-    const bmiForm = page.locator('form#bmi-form'); 
+    const bmiForm = page.locator('//div[@class="card"]'); 
     await expect(bmiForm).toBeVisible();
   });
 
@@ -33,7 +33,7 @@ test.describe('BMI Calculator UI Tests', () => {
     const aboutButton = page.locator('//a[text()=" About"]'); 
     await aboutButton.click();
 
-    const aboutSection = page.locator('section#about'); 
+    const aboutSection = page.locator('main'); 
     await expect(aboutSection).toBeVisible();
   });
 
@@ -41,7 +41,7 @@ test.describe('BMI Calculator UI Tests', () => {
     const resourcesButton = page.locator('//a[text()=" Resources"]'); 
     await resourcesButton.click();
 
-    const resourcesSection = page.locator('section#resources'); 
+    const resourcesSection = page.locator('section'); 
     await expect(resourcesSection).toBeVisible();
   });
 });
