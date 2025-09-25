@@ -38,6 +38,12 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
+  //For Smoke Testing
+  //grep:[new RegExp('smoke')],
+  //For Sanity Testing
+  //grep:[new RegExp('sanity')],
+  //For Regression Testing
+  //grep:[new RegExp('regression')],
 
   /* Configure projects for major browsers */
   projects: [
