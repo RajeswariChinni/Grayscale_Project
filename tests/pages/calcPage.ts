@@ -13,7 +13,7 @@ export default class calcPage
     }
     async height(heightdata:string)
     {
-         await this.page.getByRole('spinbutton', { name: 'Height' }).fill(heightdata);
+         await this.page.getByPlaceholder('Enter your height').fill(heightdata);
     }
     async dropdown(dropdownselect:string)
     {
@@ -21,14 +21,14 @@ export default class calcPage
     }
     async weight(weightdata:string)
     {
-          await this.page.getByRole('spinbutton', { name: 'Weight' }).fill(weightdata);
+          await this.page.locator('[id="weightValue"]').fill(weightdata);
     }
     async weightselect(weightsel:string)
     {
-         await this.page.locator('#weightUnit').selectOption(weightsel);
+         await this.page.locator('//select[@id="weightUnit"]').selectOption(weightsel);
     }
     async submitbutton()
     {
-        await this.page.getByRole('button', { name: 'Calculate Now' }).click();
+        await this.page.getByText('Calculate Now').click();
 }
 }
