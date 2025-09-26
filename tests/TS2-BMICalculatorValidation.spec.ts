@@ -7,12 +7,12 @@ test.describe('BMI Calculator Functionality', async () => {
     await page.goto('https://vagdevimahendrada.github.io/BMICalculator/');
   })
 
-  test.afterEach(async ({ page }, testInfo) => {    
+  test.afterEach(async ({ page }, testInfo) => {  
     await testInfo.attach(`Screenshot - ${testInfo.title}`, {
       body: await page.screenshot(),
       contentType: 'image/png',
   });
-  await page.close()
+  await page.close();
 });
   
   for (const data of dataset.data){
