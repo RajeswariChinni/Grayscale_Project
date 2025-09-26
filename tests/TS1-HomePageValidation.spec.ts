@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { beforeEach } from 'node:test';
 
 test.describe('BMI Calculator UI Tests', () => {
   const Url = 'https://vagdevimahendrada.github.io/BMICalculator/'; 
