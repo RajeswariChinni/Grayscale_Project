@@ -7,9 +7,7 @@ test.describe('BMI Calculator Functionality', async () => {
     await page.goto('https://vagdevimahendrada.github.io/BMICalculator/');
   })
 
-  test.afterEach(async ({ page }, testInfo) => {
-    // const sanitizedTitle = testInfo.title.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
-    
+  test.afterEach(async ({ page }, testInfo) => {    
     await testInfo.attach(`Screenshot - ${testInfo.title}`, {
       body: await page.screenshot(),
       contentType: 'image/png',
