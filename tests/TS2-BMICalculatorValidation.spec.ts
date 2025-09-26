@@ -16,7 +16,7 @@ test.describe('BMI Calculator Functionality', async () => {
 });
   
   for (const data of dataset.data){
-    test(`Verify BMI calculation with ${data.height} ${data.heightMetric} and ${data.weight} ${data.weightMetric} @regression`,async({page})=>{
+    test(`Verify BMI calculation with ${data.height} ${data.heightMetric} and ${data.weight} ${data.weightMetric} @sanity @regression`,async({page})=>{
       const logincredentials=new calcPage(page);
       await logincredentials.clickbutton();
       await logincredentials.height(data.height);

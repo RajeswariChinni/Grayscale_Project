@@ -32,7 +32,6 @@ test.describe('Resource Page Functionality', async () => {
       context.waitForEvent('page'),
       page.click("//a[contains(text(),'BMI Information')]")
     ]);
-    
     await page2.waitForLoadState();
     await expect.soft(page2).toHaveURL("https://www.cdc.gov/bmi/about/?CDC_AAref_Val=https://www.cdc.gov/healthyweight/assessing/bmi/index.html");
   })

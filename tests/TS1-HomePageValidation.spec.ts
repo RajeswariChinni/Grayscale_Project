@@ -15,7 +15,7 @@ test.describe('BMI Calculator UI Tests', () => {
     await expect.soft(layoutContainer).toBeVisible();
   });
 
-  test('Verify Start Your BMI Check button visibility @smoke @regression', async ({ page }) => {
+  test('Verify Start Your BMI Check button visibility', async ({ page }) => {
     const startButton = page.locator('//button[text()="Start Your BMI Check"]'); 
     await expect.soft(startButton).toBeVisible();
     await expect.soft(startButton).toHaveText(/Start Your BMI Check/i);
