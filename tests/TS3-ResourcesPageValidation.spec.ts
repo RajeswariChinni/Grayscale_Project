@@ -7,13 +7,11 @@ test.describe('Resource Page Functionality', async () => {
     await page.getByRole('link', { name: 'Resources' }).click();
   })
 
-  test.afterEach(async({page})=>{
+  test.afterEach(async ({ page }, testInfo) => {  
     await page.goBack();
-  })
-  
-  test.afterAll(async({browser})=>{
-    await browser.close();
-  })
+    await page.waitForLoadState();
+    await page.close();
+  });
 
   test('Verify "WHO - Obsesity and Overweight Facts wellness" link @smoke @regression',async({page,context})=>{
     const headingtext = page.locator("//h1[text()='Health Resources']");

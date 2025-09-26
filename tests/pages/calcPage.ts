@@ -11,24 +11,11 @@ export default class calcPage
     {
          await this.page.getByRole('button', { name: 'Start Your BMI Check' }).click();
     }
-    async height(heightdata:string)
-    {
-         await this.page.getByPlaceholder('Enter your height').fill(heightdata);
-    }
-    async dropdown(dropdownselect:string)
-    {
-         await this.page.locator('#heightUnit').selectOption(dropdownselect);
-    }
-    async weight(weightdata:string)
-    {
+    async CalculationofBMI(heightdata:string,dropdownselect:any='cm',weightdata:string,weightsel:any='kg'){
+          await this.page.getByPlaceholder('Enter your height').fill(heightdata);
+          await this.page.locator('#heightUnit').selectOption(dropdownselect);
           await this.page.locator('[id="weightValue"]').fill(weightdata);
+          await this.page.locator('//select[@id="weightUnit"]').selectOption(weightsel);
+          await this.page.getByText('Calculate Now').click();
     }
-    async weightselect(weightsel:string)
-    {
-         await this.page.locator('//select[@id="weightUnit"]').selectOption(weightsel);
-    }
-    async submitbutton()
-    {
-        await this.page.getByText('Calculate Now').click();
-}
 }

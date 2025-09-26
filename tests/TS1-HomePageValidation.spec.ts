@@ -1,9 +1,20 @@
 import { test, expect } from '@playwright/test';
+import { beforeEach } from 'node:test';
 
 test.describe('BMI Calculator UI Tests', () => {
   const Url = 'https://vagdevimahendrada.github.io/BMICalculator/'; 
   test.beforeEach(async ({ page }) => {
     await page.goto(Url);
+  });
+
+  test.afterEach(async ({ page }, testInfo) => {  
+    await page.waitForTimeout(2000);
+    await testInfo.attach(`Screenshot - ${testInfo.title}`, {
+      body: await page.screenshot(),
+      contentType: 'image/png',
+    });
+    
+    await page.close();
   });
 
   test('Verify page heading and layout @smoke @regression', async ({ page }) => {
