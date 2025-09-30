@@ -11,6 +11,7 @@ test.describe('Resource Page Functionality', async () => {
     await page.goBack();
     await page.waitForLoadState();
     await page.close();
+    await page.waitForTimeout(2000);
   });
 
   test('Verify "WHO - Obsesity and Overweight Facts wellness" link @smoke @regression',async({page,context})=>{
