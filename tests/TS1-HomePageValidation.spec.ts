@@ -16,7 +16,7 @@ test.describe('BMI Calculator UI Tests', () => {
     await page.close();
   });
 
-  test('Verify page heading and layout @smoke @regression', async ({ page }) => {
+  test('Verify page heading and layout', async ({ page }) => {
     const heading = page.locator('//h1[text()=" BMI CALCULATOR"]'); 
     await expect.soft(heading).toBeVisible();
     await expect.soft(heading).toHaveText(/BMI Calculator/i);
@@ -28,7 +28,7 @@ test.describe('BMI Calculator UI Tests', () => {
     await expect.soft(startButton).toHaveText(/Start Your BMI Check/i);
   });
 
-  test('Verify Start Your BMI Check button functionality @smoke @regression', async ({ page }) => {
+  test('Verify Start Your BMI Check button functionality', async ({ page }) => {
     const startButton = page.locator('//button[text()="Start Your BMI Check"]');
     await startButton.click();
 
@@ -36,7 +36,7 @@ test.describe('BMI Calculator UI Tests', () => {
     await expect.soft(bmiForm).toBeVisible();
   });
 
-  test('Verify About button functionality @smoke @regression', async ({ page }) => {
+  test('Verify About button functionality', async ({ page }) => {
     const aboutButton = page.locator('//a[text()=" About"]'); 
     await aboutButton.click();
 
@@ -44,7 +44,7 @@ test.describe('BMI Calculator UI Tests', () => {
     await expect.soft(aboutSection).toBeVisible();
   });
 
-  test('Verify Resources button functionality @smoke @regression', async ({ page }) => {
+  test('Verify Resources button functionality', async ({ page }) => {
     const resourcesButton = page.locator('//a[text()=" Resources"]'); 
     await resourcesButton.click();
 

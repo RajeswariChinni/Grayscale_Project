@@ -13,7 +13,7 @@ test.describe('Resource Page Functionality', async () => {
     await page.close();
   });
 
-  test('Verify "WHO - Obsesity and Overweight Facts wellness" link @smoke @regression',async({page,context})=>{
+  test('Verify "WHO - Obsesity and Overweight Facts wellness" link',async({page,context})=>{
     const [page1] = await Promise.all([
       context.waitForEvent('page'),
       page.click("//a[contains(text(),'Obesity and')]")
@@ -24,7 +24,7 @@ test.describe('Resource Page Functionality', async () => {
     await page1.close()
   })
   
-  test('Verify "CDC - BMI Information" link @smoke @regression',async({page,context})=>{
+  test('Verify "CDC - BMI Information" link',async({page,context})=>{
     const [page2] = await Promise.all([
       context.waitForEvent('page'),
       page.click("//a[contains(text(),'BMI Information')]")
@@ -34,7 +34,7 @@ test.describe('Resource Page Functionality', async () => {
     await page2.close()
   })
 
-  test('Verify "What to do if you are underweight?" link @smoke @regression',async({page,context})=>{
+  test('Verify "What to do if you are underweight?" link',async({page,context})=>{
     const [page3] = await Promise.all([
       context.waitForEvent('page'),
       page.click("//a[contains(text(),'What to do')]")

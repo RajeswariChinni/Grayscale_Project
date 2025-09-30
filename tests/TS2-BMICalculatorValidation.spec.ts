@@ -18,7 +18,7 @@ test.describe('BMI Calculator Functionality', async () => {
   });
   
   for (const data of dataset.data){
-    test(`Verify BMI calculation with ${data.height} ${data.heightMetric} and ${data.weight} ${data.weightMetric} @sanity @regression`,async({page})=>{
+    test(`Verify BMI calculation with ${data.height} ${data.heightMetric} and ${data.weight} ${data.weightMetric}`,async({page})=>{
       const calculationBMI=new calcPage(page);
       await calculationBMI.clickbutton();
       await calculationBMI.CalculationofBMI(data.height,data.heightMetric,data.weight,data.weightMetric);
@@ -26,7 +26,7 @@ test.describe('BMI Calculator Functionality', async () => {
     })
   }
 
-  test('Verify error message when height is left blank @sanity @regression',async({page})=>{
+  test('Verify error message when height is left blank',async({page})=>{
     const calculationBMI=new calcPage(page);
     await calculationBMI.clickbutton();
     await calculationBMI.CalculationofBMI('',undefined,'60','kg');
@@ -34,21 +34,21 @@ test.describe('BMI Calculator Functionality', async () => {
   })
 
   
-  test('Verify error message when weight is left blank @sanity @regression',async({page})=>{
+  test('Verify error message when weight is left blank',async({page})=>{
       const calculationBMI=new calcPage(page);
       await calculationBMI.clickbutton();
       await calculationBMI.CalculationofBMI('170','cm','',undefined);
       await expect.soft(page.locator('#bmiResult')).toContainText('Please enter valid');
   })
   
-  test('Verify error message when given height is negative @sanity @regression',async({page})=>{
+  test('Verify error message when given height is negative',async({page})=>{
     const calculationBMI=new calcPage(page);
     await calculationBMI.clickbutton();
     await calculationBMI.CalculationofBMI('-140','cm','70','kg');
     await expect.soft(page.locator('#bmiResult')).toContainText('Please enter valid');
   })
   
-  test('Verify error message when given weight is negative @sanity @regression',async({page})=>{
+  test('Verify error message when given weight is negative',async({page})=>{
     const calculationBMI=new calcPage(page);
     await calculationBMI.clickbutton();
     await calculationBMI.CalculationofBMI('170','cm','-70','kg');
