@@ -5,6 +5,8 @@ test.describe('Resource Page Functionality', async () => {
     await page.goto('https://vagdevimahendrada.github.io/BMICalculator/');
     await expect.soft(page).toHaveURL("https://vagdevimahendrada.github.io/BMICalculator/");
     await page.getByRole('link', { name: 'Resources' }).click();
+    const headingtext = page.locator("//h1[text()='Health Resources']");
+    await expect.soft(headingtext).toHaveText("Health Resources");
   })
 
   test.afterEach(async ({ page }, testInfo) => {  
@@ -12,8 +14,6 @@ test.describe('Resource Page Functionality', async () => {
   });
 
   test('Verify "WHO - Obsesity and Overweight Facts wellness" link @smoke @regression',async({page,context})=>{
-    const headingtext = page.locator("//h1[text()='Health Resources']");
-    await expect.soft(headingtext).toHaveText("Health Resources");
     const [page1] = await Promise.all([
       context.waitForEvent('page'),
       page.click("//a[contains(text(),'Obesity and')]")
