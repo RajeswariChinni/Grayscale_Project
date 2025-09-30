@@ -8,7 +8,6 @@ test.describe('Resource Page Functionality', async () => {
   })
 
   test.afterEach(async ({ page }, testInfo) => {  
-    await page.waitForTimeout(2000);
     await page.close();
   });
 
@@ -22,7 +21,7 @@ test.describe('Resource Page Functionality', async () => {
     
     await page1.waitForLoadState();
     await expect.soft(page1).toHaveURL("https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight");
-    await page1.close();
+    await page1.close()
   })
   
   test('Verify "CDC - BMI Information" link @smoke @regression',async({page,context})=>{
@@ -32,7 +31,7 @@ test.describe('Resource Page Functionality', async () => {
     ]);
     await page2.waitForLoadState();
     await expect.soft(page2).toHaveURL("https://www.cdc.gov/bmi/about/?CDC_AAref_Val=https://www.cdc.gov/healthyweight/assessing/bmi/index.html");
-    await page2.close();
+    await page2.close()
   })
 
   test('Verify "What to do if you are underweight?" link @smoke @regression',async({page,context})=>{
@@ -43,7 +42,7 @@ test.describe('Resource Page Functionality', async () => {
     
     await page3.waitForLoadState();
     await expect.soft(page3).toHaveURL("https://www.healthdirect.gov.au/what-to-do-if-you-are-underweight");
-    await page3.close();
+    await page3.close()
   })
 
 });

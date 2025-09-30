@@ -20,9 +20,6 @@ test.describe('BMI Calculator UI Tests', () => {
     const heading = page.locator('//h1[text()=" BMI CALCULATOR"]'); 
     await expect.soft(heading).toBeVisible();
     await expect.soft(heading).toHaveText(/BMI Calculator/i);
-
-    const layoutContainer = page.locator('//button[text()="Start Your BMI Check"]'); 
-    await expect.soft(layoutContainer).toBeVisible();
   });
 
   test('Verify Start Your BMI Check button visibility', async ({ page }) => {
